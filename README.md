@@ -26,6 +26,19 @@ To see the application running it's recommended that you:
 7. Click the button to visualise data
 
 
+## Pipeline Automation 
+
+There's the potential to apply configuration to this repository to automate the building and pushing of Docker Images through an **AWS CodePipeline** and **AWS CodeBuild** project. 
+
+### Secret Mananger
+
+To automate this you'll need to add a secret to **AWS's Secret Mananger** resource. 
+
+- Create a secret named: **pipeline-docker-credentials**
+- With two keys:
+  -  **username** - value: your Docker username
+  - **password** - value: your Docker password
+
 
 ## Manual Docker Build
 
