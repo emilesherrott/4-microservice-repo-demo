@@ -14,22 +14,22 @@ phases:
   build:
     commands:
       - echo "Building Docker Image DB..."
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-db-cloud:latest ../pottery-db/
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-db-cloud:$CODEBUILD_BUILD_NUMBER ../pottery-db/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-db-cloud:latest ./pottery-db/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-db-cloud:$CODEBUILD_BUILD_NUMBER ./pottery-db/
 
 
       - echo "Building Docker Image API..."
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-api-cloud:latest ../pottery-api/
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-api-cloud:$CODEBUILD_BUILD_NUMBER ../pottery-api/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-api-cloud:latest ./pottery-api/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-api-cloud:$CODEBUILD_BUILD_NUMBER ./pottery-api/
 
       - echo "Building Docker Image PYTHON..."
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-python-cloud:latest ../pottery-python/
-      - docker build --platform linux/amd64 -t emilesherrott/pottery-python-cloud:$CODEBUILD_BUILD_NUMBER ../pottery-python/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-python-cloud:latest ./pottery-python/
+      - docker build --platform linux/amd64 -t emilesherrott/pottery-python-cloud:$CODEBUILD_BUILD_NUMBER ./pottery-python/
 
 
       - echo "Building Docker Image JAVA..."
-      - docker build --platform linux/amd64 -t emilesherrott/java-logger-cloud:latest ../java-logger/
-      - docker build --platform linux/amd64 -t emilesherrott/java-logger-cloud:$CODEBUILD_BUILD_NUMBER ../java-logger/
+      - docker build --platform linux/amd64 -t emilesherrott/java-logger-cloud:latest ./java-logger/
+      - docker build --platform linux/amd64 -t emilesherrott/java-logger-cloud:$CODEBUILD_BUILD_NUMBER ./java-logger/
 
   post_build:
     commands:
